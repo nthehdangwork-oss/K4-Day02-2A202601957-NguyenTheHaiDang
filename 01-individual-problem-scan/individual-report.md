@@ -1,18 +1,151 @@
-#  Individual Problem Scan
-###  Bảng tổng hợp Vấn đề Quan sát (Problem Scan Table)
+# Individual Problem Scan
 
-| STT | Vấn đề quan sát được | Lăng kính chính | Ai chịu ảnh hưởng? (Actor) | Dấu hiệu thực tế (Metric / Evidence) | AI có thể hỗ trợ không? | Đã có AI hỗ trợ chưa? | Đề xuất hướng sử dụng AI để làm tốt hơn |
-| :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
-| **01** | **Tra cứu & hiểu pháp luật kinh doanh** cho SME và Founder trẻ | **Tốn thời gian**, **AI hỗ trợ tốt hơn** & **Khó khăn từ người khác** | Founder trẻ lần đầu khởi nghiệp, chủ doanh nghiệp nhỏ (SME/Micro) | Mất 5–10h/tuần đọc luật; tốn chi phí thuê tư vấn; nguy cơ bị phạt do hiểu sai quy định. | **Có** | **Đã có một phần** *(Chatbot chung như ChatGPT, Gemini hoặc ứng dụng tra cứu luật).* | • **Legal AI Agent chuyên biệt:** Ràng buộc dữ liệu từ CSDL Pháp luật quốc gia.<br>• Biến văn bản luật thành **dạng Hỏi-Đáp / Flowchart** theo từng loại hình kinh doanh.<br>• Tự động cảnh báo khi có Luật/Thông tư mới ảnh hưởng tới ngành hàng. |
-| **02** | **Thủ tục & quy trình hành chính kinh doanh** (Đăng ký GPKD, Thuế, PCCC...) | **Lặp lại**, **Tốn thời gian** & **Khó khăn từ người khác** | Founder trẻ, nhân viên vận hành / pháp lý | Đi lại 2–4 lần/thủ tục do sai hồ sơ; mất vài tuần đến hàng tháng/giấy phép; thủ tục chồng chéo. | **Có** | **Chưa phổ biến** *(Chủ yếu dừng ở các bài hướng dẫn tĩnh hoặc chatbot tư vấn dịch vụ công cơ bản).* | • **Interactive Process Assistant:** AI tự động sinh **Checklist hồ sơ** dựa trên quy mô/mô hình công ty.<br>• **Smart OCR & Validator:** AI quét/soát lỗi chính tả, sai lệch thông tin trên biểu mẫu trước khi nộp thật. |
-| **03** | **Thu thập dữ liệu, pháp lý thuế & tính lợi nhuận ròng TMĐT** (Shopee, TikTok...) | **Lặp lại**, **Tốn thời gian** & **AI hỗ trợ tốt hơn** | Chủ gian hàng TMĐT, kế toán / vận hành TMĐT | Mất 3–5h/tuần tải và ghép file Excel đa sàn; lệch biên lợi nhuận do phí ẩn; rủi ro phạt thuế TMĐT. | **Có** | **Đã có một phần** *(Các phần mềm ERP/Kế toán tích hợp AI bóc tách hoá đơn, nhưng đối soát đa sàn sâu vẫn hạn chế).* | • **Multi-channel Finance AI Agent:** Tự động kết nối/bóc tách dữ liệu báo cáo từ Shopee/TikTok/Lazada.<br>• **Hidden Fee & Tax Calculator:** Tự động phân tích phí ẩn, tính biên lợi nhuận ròng và gợi ý trích lập dự phòng thuế TMĐT. |
-| **04** | **Nghiên cứu thị trường & dự đoán xu hướng** cho cá nhân (Solopreneur) | **Tốn thời gian** & **AI hỗ trợ tốt hơn** | Solo Founder, Marketer cá nhân, Nhà nghiên cứu sản phẩm | Tốn hàng tuần đọc tin tức; dữ liệu phân tán; quyết định cảm tính; không có ngân sách mua báo cáo đắt tiền. | **Có** | **Đã có** *(AI Web Browsing, Social Listening Tool tích hợp AI tóm tắt).* | • **AI Trend Spotter & Forecasting:** Gom dữ liệu từ MXH, Google Trends, e-Commerce để phát hiện tín hiệu xu hướng mới.<br>• **Scenario Simulation:** AI mô phỏng các kịch bản thị trường (Best/Worst case) giúp thử nghiệm giả định. |
-| **05** | **Tìm kiếm & đánh giá nhà cung cấp** ổn định về giá và chất lượng | **Tốn thời gian**, **AI hỗ trợ tốt hơn** & **Khó khăn từ người khác** | Chủ doanh nghiệp nhỏ, Quản lý chuỗi cung ứng/thu mua | Mất 1–2 tháng thử nghiệm; đứt gãy nguồn hàng 1–2 lần/năm; giá & chất lượng biến động. | **Có** | **Rất ít** *(Chủ yếu tra cứu thủ công trên 1688, Alibaba hoặc qua môi giới).* | • **Supplier Matchmaker & Scoring:** AI tự tổng hợp, đối chiếu đánh giá (reviews), giá cả, năng lực sản xuất từ nhiều nguồn.<br>• **Risk Alert System:** Phân tích độ uy tín của xưởng và cảnh báo sớm về rủi ro tăng giá/chậm tiến độ. |
+## 1. Scan rộng các vấn đề quan sát được
+
+Tôi bắt đầu từ trải nghiệm thực tế của bản thân và các người xung quanh, rồi chọn những vấn đề có thể vẽ workflow, có bottleneck rõ và có thể đo được bằng thời gian, số lần lặp lại hoặc rủi ro.
+
+| STT | Lăng kính | Vấn đề quan sát được | Ai chịu ảnh hưởng? | Dấu hiệu thật |
+| :---: | :--- | :--- | :--- | :--- |
+| 01 | Tốn thời gian | Tra cứu và hiểu pháp luật kinh doanh cho SME / Founder trẻ | Founder trẻ, chủ doanh nghiệp nhỏ | Mất 5–10 giờ/tuần đọc luật; tốn chi phí thuê tư vấn; dễ hiểu sai quy định. |
+| 02 | Lặp lại + đau đầu từ người khác | Thủ tục hành chính kinh doanh (đăng ký GPKD, thuế, PCCC, giấy phép) | Founder, nhân viên vận hành / pháp lý | Phải đi lại 2–4 lần/thủ tục vì hồ sơ sai; mất vài tuần đến hàng tháng để được cấp phép. |
+| 03 | Lặp lại + tốn thời gian | Thu thập dữ liệu, đối soát thuế và tính lợi nhuận ròng trên sàn TMĐT | Chủ gian hàng TMĐT, kế toán, vận hành đa kênh | Mất 3–5 giờ/tuần để ghép file Excel đa sàn; dễ sai sót do phí ẩn và dữ liệu phân tán. |
+| 04 | Tốn thời gian + AI có thể tốt hơn | Nghiên cứu thị trường và phát hiện xu hướng mới cho solopreneur | Solo founder, marketer, nhà nghiên cứu sản phẩm | Tốn nhiều thời gian đọc tin tức; dữ liệu phân tán; quyết định còn cảm tính. |
+| 05 | Tốn thời gian + khó khăn từ người khác | Tìm kiếm và đánh giá nhà cung cấp về giá, chất lượng và độ tin cậy | Chủ doanh nghiệp nhỏ, quản lý thu mua | Mất 1–2 tháng thử nghiệm; thường bị đứt gãy nguồn hàng hoặc phải đổi nhà cung cấp đột ngột. |
+| 06 | Lặp lại + pain từ người khác | Theo dõi deadline, giấy tờ và các việc cần làm định kỳ cho doanh nghiệp nhỏ | Founder, nhân viên vận hành | Việc cần làm bị trôi, dễ quên context và phải nhắc lại nhiều lần. |
 
 ---
-### TOP 3
-| Thứ tự ưu tiên | Vấn đề quan sát được | Actor chịu ảnh hưởng trực tiếp | Lý do cần xử lý ngay |
-| :---: | :--- | :--- | :--- |
-| **TOP 1** | **Thu thập dữ liệu, pháp lý thuế & tính lợi nhuận ròng trên sàn TMĐT** | • Chủ gian hàng TMĐT (Shopee, TikTok Shop, Lazada...)<br>• Kế toán / Nhân viên vận hành bán hàng đa kênh | • **Rủi ro sinh tử về tài chính:** Doanh thu app hiển thị cao nhưng dòng tiền thực tế bị âm do ma trận phí ẩn (phí sàn, Freeship Xtra, Ads, hoàn hàng) không được kiểm soát.<br>• **Siết chặt quản lý thuế TMĐT:** Nguy cơ lớn bị truy thu và phạt chậm nộp thuế nếu không theo dõi và trích lập dự phòng thuế chính xác từ đầu.<br>• **Quá tải thao tác thủ công:** Mất hàng giờ ghép file Excel thủ công mỗi tuần, dễ sai sót. |
-| **TOP 2** | **Tra cứu & hiểu pháp luật kinh doanh cho SME / Founder trẻ** | • Founder trẻ lần đầu khởi nghiệp<br>• Chủ doanh nghiệp siêu nhỏ (Micro-SME)<br>• Solopreneur | • **Chi phí sửa sai cực kỳ đắt đỏ:** Hiểu sai quy định về đăng ký kinh doanh, thuế hay hợp đồng có thể dẫn đến phạt tiền nặng hoặc đình chỉ hoạt động.<br>• **Rào cản tâm lý & Năng lượng:** Founder bị vắt kiệt sức và luôn lo âu vì ngôn ngữ pháp lý rườm rà, phức tạp.<br>• **Thiếu ngân sách tư vấn:** Không đủ chi phí hàng chục triệu đồng thuê luật sư riêng cho các thắc mắc cơ bản hàng ngày. |
-| **TOP 3** | **Tìm hiểu & hoàn thành thủ tục, quy trình hành chính kinh doanh** | • Founder / Chủ doanh nghiệp<br>• Nhân viên phụ trách pháp lý & vận hành | • **Lãng phí thời gian & Mất cơ hội:** Đi lại 2–4 lần/thủ tục do sai hồ sơ làm kéo dài thời gian cấp phép từ vài tuần đến hàng tháng, gây trễ ngày ra mắt sản phẩm.<br>• **Gây chán nản & Thụ động:** Thiếu checklist lộ trình chuẩn xác khiến người làm thủ tục bị hoang mang và tốn công nhắc nhở/chờ đợi phản hồi. |
+
+## 2. Top 3 Problem Cards
+
+### Top 1 — Thu thập dữ liệu, pháp lý thuế và tính lợi nhuận ròng trên sàn TMĐT
+
+**Problem 1 câu:** Mỗi tuần, chủ gian hàng TMĐT phải tự ghép dữ liệu từ nhiều sàn và file Excel để hiểu lợi nhuận thật, nhưng quá trình này kéo dài, dễ sai và có rủi ro về thuế.
+
+**Actor:** Chủ gian hàng TMĐT, kế toán, nhân viên vận hành bán hàng đa kênh.
+
+**Current workflow:**
+1. Tải báo cáo từ Shopee / TikTok / Lazada.
+2. Xuất file Excel và sắp xếp dữ liệu thủ công.
+3. Đối soát doanh thu, chi phí, phí ẩn và hoàn hàng.
+4. Tính lợi nhuận ròng và dự phòng thuế.
+5. Gửi báo cáo cho người quản lý hoặc kế toán.
+
+**Bottleneck:** Bước đối soát dữ liệu và tính lợi nhuận ròng là chỗ mất thời gian nhất và dễ sai sót nhất.
+
+**Impact:** Mất 3–5 giờ/tuần; có thể dẫn đến đánh giá sai lợi nhuận, rủi ro phạt thuế hoặc quyết định kinh doanh sai.
+
+**Success metric:** Giảm thời gian xử lý từ 3–5 giờ xuống dưới 1 giờ/tuần, đồng thời giảm lỗi đối soát.
+
+**Non-AI alternative:** Template bảng tính chuẩn, quy trình đối soát cố định, checklist kiểm tra thủ công.
+
+**AI hypothesis:** AI có thể hỗ trợ tự phân loại dữ liệu, phát hiện phí ẩn, gợi ý cách tính lợi nhuận ròng và tóm tắt rủi ro thuế.
+
+**Draft current workflow:**
+```text
+[1] Tải dữ liệu từ nhiều sàn
+→ [2] Ghép file Excel thủ công
+→ [3] Đối soát doanh thu/chi phí
+→ [4] Tính lợi nhuận ròng
+→ [5] Review và gửi báo cáo
+```
+
+**Draft future workflow:**
+```text
+[1] Tự động kết nối dữ liệu từ các sàn
+→ [2] AI chuẩn hóa và phân loại dữ liệu
+→ [3] AI phát hiện phí ẩn và gợi ý cách tính lợi nhuận ròng
+→ [4] Người dùng review và xác nhận
+→ [5] Xuất báo cáo cuối cùng
+```
+
+---
+
+### Top 2 — Tra cứu và hiểu pháp luật kinh doanh cho SME / Founder trẻ
+
+**Problem 1 câu:** Founder trẻ thường mất rất nhiều thời gian để tra cứu và hiểu các quy định pháp luật liên quan đến hoạt động kinh doanh, nhưng ngôn ngữ pháp lý rườm rà khiến họ dễ hiểu sai hoặc trì hoãn.
+
+**Actor:** Founder trẻ lần đầu khởi nghiệp, chủ doanh nghiệp nhỏ, solopreneur.
+
+**Current workflow:**
+1. Tìm thông tin trên Google hoặc các website tra cứu luật.
+2. Đọc nhiều tài liệu dài và rời rạc.
+3. Câu hỏi lại nhiều lần về nghĩa vụ pháp lý.
+4. Dựa vào phán đoán cá nhân hoặc thuê tư vấn khi cần.
+
+**Bottleneck:** Tìm đúng nội dung phù hợp và hiểu đúng quy định trong bối cảnh doanh nghiệp cụ thể là bước khó nhất.
+
+**Impact:** Mất 5–10 giờ/tuần; có thể đưa ra quyết định sai, bị phạt hoặc phải chi tiền cho tư vấn không cần thiết.
+
+**Success metric:** Giảm thời gian tra cứu và hiểu quy định, đồng thời tăng độ tin cậy khi trả lời các câu hỏi pháp lý cơ bản.
+
+**Non-AI alternative:** Sổ tay quy định, checklist pháp lý, tư vấn từ chuyên gia khi cần.
+
+**AI hypothesis:** AI có thể giúp chuyển luật thành câu hỏi/đáp ngắn gọn, tóm tắt quy định theo từng loại hình kinh doanh và cảnh báo thay đổi mới.
+
+**Draft current workflow:**
+```text
+[1] Tìm tài liệu pháp luật
+→ [2] Đọc và đối chiếu nhiều nguồn
+→ [3] Tự suy luận nghĩa vụ
+→ [4] Xác nhận bằng tư vấn hoặc phán đoán riêng
+```
+
+**Draft future workflow:**
+```text
+[1] Người dùng đặt câu hỏi theo ngữ cảnh
+→ [2] AI tóm tắt quy định và giải thích bằng ngôn ngữ đơn giản
+→ [3] AI đề xuất checklist cần làm theo loại hình doanh nghiệp
+→ [4] Người dùng kiểm tra và quyết định cuối cùng
+```
+
+---
+
+### Top 3 — Hoàn thành thủ tục và quy trình hành chính kinh doanh
+
+**Problem 1 câu:** Người làm thủ tục doanh nghiệp thường phải đi lại nhiều lần vì hồ sơ chưa chuẩn, khiến thời gian cấp phép bị kéo dài và làm chậm tiến độ ra mắt sản phẩm.
+
+**Actor:** Founder, chủ doanh nghiệp, nhân viên pháp lý và vận hành.
+
+**Current workflow:**
+1. Xác định loại thủ tục cần làm.
+2. Tìm tài liệu hướng dẫn và checklist.
+3. Chuẩn bị hồ sơ.
+4. Nộp hồ sơ và chờ phản hồi.
+5. Nếu sai, phải sửa lại và đi lại nhiều lần.
+
+**Bottleneck:** Thiếu checklist chuẩn và việc kiểm tra hồ sơ trước khi nộp là điểm gây lãng phí lớn nhất.
+
+**Impact:** Mất vài tuần đến hàng tháng; làm chậm ngày ra mắt, tăng stress và tốn thêm chi phí di chuyển.
+
+**Success metric:** Giảm số lần nộp sai hồ sơ và rút ngắn thời gian hoàn tất thủ tục.
+
+**Non-AI alternative:** Checklist giấy, mẫu hồ sơ chuẩn, hướng dẫn thủ công từ cơ quan liên quan.
+
+**AI hypothesis:** AI có thể hỗ trợ sinh checklist hồ sơ, rà soát lỗi nhập liệu và gợi ý các giấy tờ còn thiếu trước khi nộp.
+
+**Draft current workflow:**
+```text
+[1] Xác định thủ tục cần làm
+→ [2] Tìm hướng dẫn thủ công
+→ [3] Chuẩn bị hồ sơ
+→ [4] Nộp hồ sơ và chờ phản hồi
+→ [5] Sửa lại nếu sai
+```
+
+**Draft future workflow:**
+```text
+[1] Người dùng nhập mô hình doanh nghiệp và loại thủ tục
+→ [2] AI sinh checklist hồ sơ và các bước cần làm
+→ [3] AI rà soát lỗi trước khi nộp
+→ [4] Người dùng nộp hồ sơ
+→ [5] Hệ thống ghi nhận và nhắc bước tiếp theo
+```
+
+---
+
+## 3. Vì sao 3 bài này được chọn
+
+- Có actor rõ ràng và workflow có thể vẽ được.
+- Có bottleneck cụ thể, không chỉ là vấn đề chung chung.
+- Có thể đo bằng thời gian, số lần lặp lại hoặc rủi ro.
+- Có thể so sánh giữa giải pháp không dùng AI, dùng rule/workflow và dùng agent/AI.
